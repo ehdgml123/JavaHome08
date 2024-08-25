@@ -1,0 +1,24 @@
+package Ex8;
+
+public class Static {
+	
+static int classVariable = 0;  // 클래스 변수 선언
+    
+    MyClass() {
+        classVariable++;  // 인스턴스가 생성될 때마다 클래스 변수 증가
+    }
+    
+    void printClassVariable() {
+        System.out.println("Class variable: " + classVariable);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj1 = new MyClass();
+        MyClass obj2 = new MyClass();
+        
+        obj1.printClassVariable();  // 출력: Class variable: 2
+        obj2.printClassVariable();  // 출력: Class variable: 2
+
+}
